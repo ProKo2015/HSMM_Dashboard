@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Healthcare Praxisprojekt</title>
+		<meta name="author" content="healthcare praxisprojekt">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="js/bootstrap.min.js" rel="javascript"> 
+		<link href="normalize.css" rel="stylesheet">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="d3.min.js"></script> 
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<link href="d3.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+		<script src="d3.layout.cloud.js"></script>
+		
+		 <!-- JQuery-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+		
+	
+		
+	</head>
+	
+<body>
+
+<div id="wrapper">
+<!-- Navigation -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+			<!-- optional: HealthCare -->
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="sidebar" class="collapse-in"">
+					<div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-home">
+                            </span><a href="index.html" target="_self">Dashboard</a></a>
+                        </h4>
+                    </div>
+				</div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-comment">
+                            </span>Kommentare<span class="caret"></span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="accordion-panel-body">
+                            <table class="table">
+							<tbody>
+                                <tr>
+                                    <td>
+                                        <a href="pagealle.html" target="_self">Alle</a>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pagepositive.html" target="_self">Positive</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pagenegative.html" target="_self">Negative</a>
+                                    </td>
+                                </tr>
+								</tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-tasks">
+                            </span>Vergleiche<span class="caret"></span></a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="accordion-panel-body">
+                            <table class="table">
+								<tr>
+									<td>
+									    <a href="bereiche.html" target="_self">Einzelne Bereiche </a>
+									</td>
+								</tr>	
+                                <tr>
+                                    <td>
+                                        <a href="pagetragerschaft.html" target="_self">Trägerschaft Intern</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pageregion.html" target="_self">Region</a>
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td>
+                                        <a href="jahr.html" target="_self">Jahresübersicht</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                               
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                </ul>
+				
+                <ul class="nav navbar-nav navbar-user">
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Gewähltes Krankenhaus <span class="badge"></span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						    <li> Wahl des Krankenhauses <span class="badge"></span></li>
+                            <li class="divider"></li>
+                            <li> <a href="uniklinikum.html"> Uniklinikum Essen <span class="badge"></span></a> </li>
+                            <li class="divider"></li>
+							<li> <a href="#"> Marienhospital Gelsenkirchen <span class="bagde"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"> St. Anna Hospital Herne <span class="badge"></span></a></li>
+                        </ul>
+		
+						</li>
+						</ul>
+						
+						<ul class="nav navbar-nav navbar-right">
+						<li>
+						<img src="Logo_HSMM.png" id="logo"> </img>
+						</li>
+						
+						<li>
+						
+						<div id="suche">
+						<form class="navbar-form" role="search">
+						<div class="form-group">
+						<input type="text" class="form-control" placeholder="Suchen...">
+						</div>
+						</form> 
+						</div>
+						</li>
+						
+						</ul>
+                   
+		
+		
+        
+
+				
+                
+            </div>
+        </nav>
+ 
+
+			
+<!-- Inhalt -->
+
+      <div id="page-wrapper">
+			
+		<!-- obere Hälfte --> 
+		<div class="row">
+		
+				<div class="col-md-8 col-md-offset-2">
+		   
+		<h4> Übersicht der negativen Kommentare </h4>
+	
+		
+        <div class="panel panel-danger">
+		    <div class="panel-heading">
+            <h3 class="panel-title">Klinikbewertungen</h3>
+            </div>
+            <div class="komm-panel-body" id="komm">
+             Panel content
+            </div>
+        </div>
+		
+		 <div class="panel panel-danger">
+		    <div class="panel-heading">
+            <h3 class="panel-title">Kliniken.de</h3>
+            </div>
+            <div class="komm-panel-body" id="komm">
+             Panel content
+            </div>
+        </div>
+		
+		 <div class="panel panel-danger">
+		    <div class="panel-heading">
+            <h3 class="panel-title">Weisse Liste</h3>
+            </div>
+            <div class="komm-panel-body" id="komm">
+             Panel content
+            </div>
+        </div>
+		
+			
+			</div>
+				
+                </div> <!-- Ende row -->
+
+		
+			</div> <!-- Ende Page-Wrapper -->
+
+       
+		
+		<!-- /#wrapper -->
+		</div>
+ 
+    
+
+
+						  
+						  
+
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script >
+
+	<!-- zum Verstecken von Inhalten -->
+	
+	$(document).ready(function(){
+    $(".btn-primary").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+    $(".btn-success").click(function(){
+        $(".collapse").collapse('show');
+    });
+    $(".btn-warning").click(function(){
+        $(".collapse").collapse('hide');
+    });
+});
+
+	<!-- Zum Öffnen und Schließen Accordion Bewertung und Empfehlung -->
+	$('#accordion1 .collapse').on('show.bs.collapse', function () {
+  $('#accordion1 .collapse.in').collapse('hide');
+});
+
+<!-- für Popover für mehr Infos-->
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+	</script>
+</body>
+</html>

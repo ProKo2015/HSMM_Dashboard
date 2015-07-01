@@ -1,0 +1,33 @@
+body {
+	overflow: hidden;
+	
+}
+.container-fluid
+{ 
+	/*background-color: #044C92; */
+	/* Farbverlauf */
+	background-image: linear-gradient(to bottom, #0B0B61 0%, #044C92 50%); 
+	
+	bottom: 0;
+}
+
+h1 {
+	color: white; 
+}
+
+#inhalt {
+	text-align: center; 
+	padding-top: 8%; 
+	padding-bottom: 25%;
+	
+}
+
+.footer {
+    position: fixed;
+	text-align: center;
+    bottom: 0px;
+    width: 100%;
+    height: 4%;
+    background-color: #F5F5F5;
+	
+}

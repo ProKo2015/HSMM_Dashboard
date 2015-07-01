@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Healthcare Praxisprojekt</title>
+		<meta name="author" content="healthcare praxisprojekt">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="js/bootstrap.min.js" rel="javascript"> 
+		<link href="normalize.css" rel="stylesheet">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="d3.min.js"></script> 
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<link href="d3.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+		<script src="d3.layout.cloud.js"></script>
+		
+		 <!-- JQuery-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+		
+	
+		
+	</head>
+	
+<body>
+
+<div id="wrapper">
+<!-- Navigation -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+			<!-- optional: HealthCare -->
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="sidebar" class="collapse-in"">
+						<div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-home">
+                            </span><a href="index.html" target="_self">Dashboard</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-comment">
+                            </span><a href="pagealle.html" target="_self">Kommentare</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-cloud">
+                            </span><a href="wordcloud.html" target="_self">Wordcloud</a></a>
+                        </h4>
+                    </div>
+                </div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-tasks">
+                            </span>Vergleiche<span class="caret"></span></a>
+                        </h4>
+                    </div>
+                
+                          <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="accordion-panel-body">
+                            <table class="table">
+								<tr>
+									<td>
+									    <a href="bereiche.html" target="_self">Einzelne Bereiche </a>
+									</td>
+								</tr>	
+                                <tr>
+                                    <td>
+                                        <a href="pagetragerschaft.html" target="_self">Trägerschaft Intern</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pageregion.html" target="_self">Region</a>
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td>
+                                        <a href="jahr.html" target="_self">Jahresübersicht</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                               
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+                </ul>
+				
+                   <ul class="nav navbar-nav navbar-user">
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> St. Martinus-Krankenhaus Düsseldorf <span class="badge"></span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						    <li> <a style="color:#044C92; font-weight: bold;">Wahl des Krankenhauses </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="id10.html" target="_self"> Kliniken der Stadt Köln GmbH Holweide <span class="badge"></span></a> </li>
+                            <li class="divider"></li>
+							<li> <a href="idx.html"> Klinikum Dortmund GmbH <span class="bagde"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="idx.html"> St. Josef Krankenhaus GmbH<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Alexianer Krefeld GmbH Maria-Hilf<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Katholisches Klinikum Essen Philippusstift<span class="badge"></span></a></li>
+							 <li class="divider"></li>
+                            <li><a style="color:#044C92;" href="startseite.html" target="_self"> Zurück zur Startseite<span class="badge"></span></a></li>
+							
+                        </ul>
+		
+						</li>
+						</ul>
+						
+						<ul class="nav navbar-nav navbar-right">
+						
+						<li>
+						<img src="Logo_HSMM.png" id="logo"> </img>
+						</li>
+						
+						<li>
+						<div id="suche">
+						<form class="navbar-form" role="search">
+						<div class="form-group">
+						<input type="text" class="form-control" placeholder="Suchen...">
+						</div>
+						</form> 
+						</div>
+						</li>
+						
+						</ul>
+                   
+		
+		
+        
+
+				
+                
+            </div>
+        </nav>
+ 
+
+			
+<!-- Inhalt -->
+
+      <div id="page-wrapper">
+			
+		<!-- obere Hälfte --> 
+		<div class="row">
+		<div class="col-md-6">
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		  Allgemeines Stimmungsbild des letzten Monats <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Sentimentanalyse der Kommentare des letzten Monats von Klinikbewertungen.de und Kliniken.de"></span>
+			</div>
+		  <div class="panel-body">
+			  <div id="dash1" class="grey">
+		  </div>
+		</div>
+		</div>
+		
+		</div>
+
+<!-- Newsfeed-->	 
+
+        <div class="col-md-6">
+	    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i>
+                            Newsfeed  <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Eingegangene Kommentare des letzten Monats auf kliniken.de und klinikbewertungen.de"></span>
+                           
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div id="comments-container"></div>
+              <script type="text/javascript">
+
+					var w = 800,
+					h = 400;
+					
+					d3.json("newsfeed_kh1.json", function(error, data) {
+
+                                                var comments = d3.select("#comments-container").append("div")
+                                                        .attr("class", "comments")
+                                                        .selectAll("g")
+                                                        .data(data)
+                                                        .enter().append("div");
+
+                                                comments.append("a")
+                                                        .attr("href", function(d) { return d.url; })
+                                                        .attr("target", "_blank")
+                                                        .text(function(d) { return d.datum + "\n\n"; });
+
+                                                comments.append("text")
+                                                        .text(function(d) { return d.kommentar +" "; });
+                                        });
+				</script>
+			</div>
+                        <!-- /.panel-body -->
+						
+			</div>	
+			</div>
+		</div> <!-- Ende row-->
+					
+				<!-- untere Hälfte --> 
+				
+				<div class="row">
+				<div class="col-md-6 col-xs-6">
+				
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-parent="#accordion1" data-target="#bewertung" style="font-size: 14px; font-weight: bold; overflow: visible;"> 
+				<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Gewichtete Verrechnung (nach Anzahl der Bewertungen) der Gesamtbewertung von Klinikbewertungen.de und Kliniken.de" data-original-title="" title=""></span>
+				<div id="headerBewertung"></div><span class="badge"></span> <b class="caret"></b>
+				</button> 
+				
+				<div class="panel-group" id="accordion1">
+				   <div class="panel"><div id="bewertung" class="collapse panel-collapse" >
+				   
+				   </div></div>
+				</div>
+				<!-- in 228 nach bold;> kommt der InfoButton  -->  
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-parent="#accordion1" data-target="#weiterempfehlung" style="font-size: 14px; font-weight:bold; overflow: visible;"><span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Gewichtete Verrechnung (nach Anzahl der Bewertungen) der Weiterempfehlungsrate von Klinikenbewertungen.de und Weisse-Liste.de" data-original-title="" title=""></span> 
+				 <div id="headerWeiterempfehlung"></div><span class="badge"></span> <b class="caret"></b>
+				</button> 
+				
+				<div class="panel-group" id="accordion1">
+				   <div class="panel"><div id="weiterempfehlung" class="collapse panel-collapse" >
+				  
+				   
+				   </div></div>
+				</div>
+				</div>
+				
+				
+				<div class="col-md-6 col-xs-6">
+				
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+					Worte, die in den letzten 30 Tagen am häufigsten erwähnt wurden<span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Worthäufigkeitsanalyse der Kommentare von Klinikbewertungen.de und Kliniken.de"></span>
+					</div>
+				  <div class="panel-body">
+						<div id="dash2" class="greyCloud">
+				  </div>
+				</div>
+				</div>
+				
+				</div>
+				
+				
+                </div> <!-- Ende row -->
+
+		
+			</div> <!-- Ende Page-Wrapper -->
+
+       
+		
+		<!-- /#wrapper -->
+		</div>
+ 
+    
+
+
+		
+	
+<script>
+
+
+//Collapsibles
+d3.json("http://134.91.18.177:5000/collapsible_kh1", function(error, data) {
+
+//Gesamtbewertung Überschrift						
+						var bewertungenTop = d3.select("#headerBewertung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						bewertungenTop.append("text")
+							.text("Gesamtbewertung: ");
+						bewertungenTop.append("text")
+							.text(function(d) { return d.rating_gesamt; });
+						bewertungenTop.append("text")
+							.text(" %");
+							
+//Gesamtbewertung: Wert für Klinikbewertungen.de
+					
+						var bewertungen = d3.select("#bewertung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						bewertungen.append("text")
+							.text("Klinikbewertungen.de: \n");
+						bewertungen.append("text")
+							.text(function(d) { return d.rating_kb; });
+						bewertungen.append("text")
+							.text(" %");
+						
+//Gesamtbewertung: Wert für Kliniken.de						
+						var bewertungen2 = d3.select("#bewertung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						bewertungen2.append("text")
+							.text("Kliniken.de: ");
+						bewertungen2.append("text")
+							.text(function(d) { return d.rating_kl; });
+						bewertungen2.append("text")
+							.text(" %");
+							
+//Weiterempfehlungsrate Gesamtwert
+var weiterempfehlungTop = d3.select("#headerWeiterempfehlung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						weiterempfehlungTop.append("text")
+							.text("Weiterempfehlungsrate: ");
+						weiterempfehlungTop.append("text")
+							.text(function(d) { return d.weiterempfehlung_gesamt; });
+						weiterempfehlungTop.append("text")
+							.text(" %");
+					
+						var weiterempfehlung = d3.select("#weiterempfehlung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						weiterempfehlung.append("text")
+							.text("Klinikbewertungen.de: \n");
+						weiterempfehlung.append("text")
+							.text(function(d) { return d.weiterempfehlung_kb; });
+						weiterempfehlung.append("text")
+							.text(" %");
+						
+						
+						var weiterempfehlung2 = d3.select("#weiterempfehlung").append("div")
+							.attr("class", "bewertungen")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						
+						weiterempfehlung2.append("text")
+							.text("Weisse-Liste.de: ");
+						weiterempfehlung2.append("text")
+							.text(function(d) { return d.weiterempfehlung_wl; });
+						weiterempfehlung2.append("text")
+							.text(" %");							
+					});
+	
+// Mhhhhh Donut
+
+ var w = 250,
+	h = 250,
+	r = 100,
+	inner = 40,
+	color = d3.scale.ordinal()
+		.range([ "#848484","#40E140","#CD0000" ]);
+
+var total = 0;
+
+
+
+d3.json("donut_kh1.json", function(error, data) {
+	  data.forEach(function(d) {
+		total += d.anzahl;
+	  });
+  
+dataObj = data;
+  
+
+var svg = d3.select("#dash1").append("svg")
+	.data(dataObj)
+		.attr("width", w)
+		.attr("height", h)
+	.append("g")
+		.attr("transform", "translate(" + r * 1.1 + "," + r * 1.1 + ")")
+
+
+
+var textTop = svg.append("text")
+	.attr("dy", ".35em")
+	.style("text-anchor", "middle")
+	.attr("class", "textTop")
+	.text("TOTAL")
+	.attr("y", -10),
+textBottom = svg.append("text")
+	.attr("dy", ".35em")
+	.style("text-anchor", "middle")
+	.attr("class", "textBottom")
+	.text(total)
+	.attr("y", 10);
+
+var arc = d3.svg.arc()
+	.innerRadius(inner)
+	.outerRadius(r);
+
+var arcOver = d3.svg.arc()
+	.innerRadius(inner + 7)
+	.outerRadius(r + 7);
+
+	var pie = d3.layout.pie()
+		.sort(null)
+		.value(function(d) { return d.anzahl; });
+
+var arcs = svg.selectAll(".arc")
+	.data(pie(dataObj))
+	.enter()
+		.append("g")
+			.attr("class", "arc")
+			.on("mouseover", function(d) {
+				d3.select(this).select("path").transition()
+					.duration(300)
+					.attr("d", arcOver)
+			
+				textTop.text(d3.select(this).datum().data.wertung)
+					.attr("y", -10);
+				textBottom.text(d3.select(this).datum().data.anzahl)
+					.attr("y", 10);
+			})
+			.on("mouseout", function(d) {
+				d3.select(this).select("path").transition()
+					.duration(200)
+					.attr("d", arc);
+			
+				textTop.text( "TOTAL" )
+					.attr("y", -10);
+				textBottom.text(total);
+			});
+
+arcs.append("path")
+	.attr("fill", function(d, i) { return color(i); } )
+	.attr("d", arc);
+
+var legendDonut = d3.select("#dash1").append("svg")
+	.attr("class", "legend")
+	.attr("width", r)
+	.attr("height", r * 2) <!-- passt sich beim löschen der beiden Zeilen (obere) an --> 
+	.selectAll("g")
+	.data(dataObj)
+	.enter().append("g")
+	.attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+
+legendDonut.append("rect")
+	.attr("width", 18)
+	.attr("height", 18)
+	.style("fill", function(d, i) { return color(i); });
+
+legendDonut.append("text")
+	.attr("x", 24)
+	.attr("y", 9)
+	.attr("dy", ".35em")
+	.text(function(d) { return d.wertung; });
+	});
+
+
+
+//Wordcloud
+d3.json("worthaeufigkeit_kh1.json", function(error, data) {	
+		
+	var width = $("#dash2").width();
+	
+    var color = d3.scale.linear()
+            .domain([0,1,2,4,6,10,15,20,100])
+			
+			.range(["#B23FA6", "#4BF1EE", "#F0E10D", "#F02525", "#F00D0D", "#1CF00D", "#1CF00D", "#F0680D", "#150DF0"]);
+			
+	d3.layout.cloud().size([width, 100])
+			.words(data)
+			.rotate(0)
+			.fontSize(function(d) { return Math.sqrt(d.haeufigkeit); })
+			.on("end", draw)
+			.start();
+
+	function draw(words) {
+		d3.select("#dash2").append("svg")
+				.attr("width", width)
+				.attr("height", 220)
+				.attr("class", "wordcloud")
+				.append("g")
+				// without the transform, words would get cutoff to the left and top, they would
+				// appear outside of the SVG area
+				.attr("transform", "translate(" + width / 2 + ",100)")
+				.selectAll("text")
+				.data(words)
+				.enter().append("text")
+				.style("font-size", function(d) {
+					if(d.haeufigkeit >= 20) return d.haeufigkeit / 2 + "px";
+					else return "10px";
+				})
+				.style("fill", function(d, i) { return color(i); })
+				.attr("transform", function(d) {
+					return "translate(" + [d.x, d.y*3] + ")rotate(" + d.rotate + ")";
+				})
+				.attr("text-anchor", "middle")
+				.text(function(d) { return d.wort; });
+	}
+});
+	
+	
+d3.json("http://134.91.18.177:5000/collapsible_kh1", function(error, data) {
+						
+						var comments1 = d3.select("#wertKliniken.de").append("div")
+							.attr("class", "comments")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+
+						comments1.append("text")
+							.text(function(d) { return d.rating_kb; });
+							
+						var comments2 = d3.select("#wertKlinikbewertungen.de").append("div")
+							.attr("class", "comments")
+							.selectAll("g")
+							.data(data)
+							.enter().append("div");
+						comments2.append("text")
+							.text(function(d) { return d.rating_kl; });
+					});
+</script>
+
+						  
+						  
+
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script >
+
+	<!-- zum Verstecken von Inhalten -->
+	
+	$(document).ready(function(){
+    $(".btn-primary").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+    $(".btn-success").click(function(){
+        $(".collapse").collapse('show');
+    });
+    $(".btn-warning").click(function(){
+        $(".collapse").collapse('hide');
+    });
+});
+
+	<!-- Zum Öffnen und Schließen Accordion Bewertung und Empfehlung -->
+	$('#accordion1 .collapse').on('show.bs.collapse', function () {
+  $('#accordion1 .collapse.in').collapse('hide');
+});
+
+<!-- für Popover für mehr Infos-->
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+	</script>
+</body>
+</html>

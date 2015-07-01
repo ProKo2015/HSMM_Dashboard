@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Healthcare Praxisprojekt</title>
+		<meta name="author" content="healthcare praxisprojekt">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="js/bootstrap.min.js" rel="javascript"> 
+		<link href="normalize.css" rel="stylesheet">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="d3.min.js"></script> 
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<link href="d3.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+		<script src="d3.layout.cloud.js"></script>
+		
+		 <!-- JQuery-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+		
+	
+		
+	</head>
+	
+<body>
+
+<div id="wrapper">
+<!-- Navigation -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+			<!-- optional: HealthCare -->
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="sidebar" class="collapse-in"">
+						<div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-home">
+                            </span><a href="index.html" target="_self">Dashboard</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-comment">
+                            </span><a href="pagealle.html" target="_self">Kommentare</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-cloud">
+                            </span><a href="wordcloud.html" target="_self">Wordcloud</a></a>
+                        </h4>
+                    </div>
+                </div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-tasks">
+                            </span>Vergleiche<span class="caret"></span></a>
+                        </h4>
+                    </div>
+                
+                        <div class="accordion-panel-body">
+                            <table class="table">
+								<tr>
+									<td>
+									    <a href="bereiche.html" target="_self">Einzelne Bereiche </a>
+									</td>
+								</tr>	
+                                <tr>
+                                    <td id="aktuell">
+                                        <a href="pagetragerschaft.html" target="_self">Trägerschaft Intern</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pageregion.html" target="_self">Region</a>
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td>
+                                        <a href="jahr.html" target="_self">Jahresübersicht</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                               
+                            </table>
+                        </div>
+                    
+                </div>
+            </div>
+                </ul>
+				
+                <ul class="nav navbar-nav navbar-user">
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> St. Martinus-Krankenhaus Düsseldorf <span class="badge"></span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						    <li> <a style="color:#044C92; font-weight: bold;">Wahl des Krankenhauses </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="id10.html" target="_self"> Kliniken der Stadt Köln GmbH Holweide <span class="badge"></span></a> </li>
+                            <li class="divider"></li>
+							<li> <a href="idx.html"> Klinikum Dortmund GmbH <span class="bagde"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="idx.html"> St. Josef Krankenhaus GmbH<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Alexianer Krefeld GmbH Maria-Hilf<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Katholisches Klinikum Essen Philippusstift<span class="badge"></span></a></li>
+							 <li class="divider"></li>
+                            <li><a style="color:#044C92;" href="startseite.html" target="_self"> Zurück zur Startseite<span class="badge"></span></a></li>
+							
+                        </ul>
+		
+						</li>
+						</ul>
+						
+						<ul class="nav navbar-nav navbar-right">
+						
+						<li>
+						<img src="Logo_HSMM.png" id="logo"> </img>
+						</li>
+						
+						<li>
+						<div id="suche">
+						<form class="navbar-form" role="search">
+						<div class="form-group">
+						<input type="text" class="form-control" placeholder="Suchen...">
+						</div>
+						</form> 
+						</div>
+						</li>
+						
+						</ul>
+                   
+		
+		
+        
+
+				
+                
+            </div>
+        </nav>
+ 
+
+			
+<!-- Inhalt -->
+
+      <div id="page-wrapper">
+			
+		<!-- obere Hälfte --> 
+		<div class="row">
+		<div class="col-md-12">
+		
+		
+		<div class="panel panel-default">
+			  <div class="panel-heading"> <h4> Durchschnittliche Bewertung Ihrer Klinik im Vergleich zu anderen Ihrer Trägerschaft  <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Ihre durchschnittliche Gesamtbewertung im Vergleich zu den Bewertungen der anderen Krankenhäuser Ihrer Trägerschaft"></span>  </h4> </div>
+			  <div class="grafik-panel-body">
+				<div class="container" id="balken"> </div>
+			  </div>
+			</div>
+		
+		
+		
+		</div>
+                </div> <!-- Ende row -->
+
+		
+			</div> <!-- Ende Page-Wrapper -->
+
+       
+		
+		<!-- /#wrapper -->
+		</div>
+ 
+    
+
+		<script>
+		
+		var margin = {top: 20, right: 0, bottom: 100, left: 160},
+		    width = 800 - margin.left - margin.right,
+		    height = 500 - margin.top - margin.bottom;
+			
+		
+
+		var x = d3.scale.ordinal()
+		    .rangeRoundBands([0, width], .5);
+
+		var y = d3.scale.linear()
+		    .range([height, 0]);
+
+		var xAxis = d3.svg.axis()
+		    .scale(x)
+		    .orient("bottom")
+			;
+			
+	/* EINGEFÜGT UNTEN: ODER um Beschriftung zu drehen: svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis)
+        .selectAll("text")  
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-65)" 
+                }); */
+
+		var yAxis = d3.svg.axis()
+		    .scale(y)
+		    .orient("left")
+		    .ticks(20);
+		
+		var svg = d3.select("div#balken").append("svg")
+		    .attr("width", width + margin.left + margin.right + 200)
+		    .attr("height", height + margin.top + margin.bottom)
+		  .append("g")
+		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+			//.attr("fill", function(d, i) { return color(i); } );
+
+				d3.json("http://134.91.18.177:5000/diagramm_tr_kh1", function(error, data) {
+		  x.domain(data.map(function(d) { return d.krankenhaus; }));
+		  y.domain([0, d3.max(data, function(d) { return d.rating_gesamt; })]); //einbindung des DatenArrays
+		  
+		  
+		
+
+		  svg.append("g")
+		      .attr("class", "x axis")
+		      .attr("transform", "translate(0," + height + ")")
+		      .call(xAxis)
+			  .selectAll("text")  
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", function(d) {
+                return "rotate(-15)" 
+                });
+
+		  svg.append("g")
+		      .attr("class", "y axis")
+		      .call(yAxis)
+		    .append("text")
+		      .attr("transform", "rotate(-90)")
+		      .attr("y", 6)
+		      .attr("dy", ".71em")
+		      .style("text-anchor", "end")
+		      .text("Bewertung in Prozent");
+
+		  svg.selectAll(".bar")
+		      .data(data)
+		    .enter().append("rect")
+		      .attr("class", "bar")
+		      .attr("x", function(d) { return x(d.krankenhaus); })
+		      .attr("width", x.rangeBand())
+		      .attr("y", function(d) { return y(d.rating_gesamt); })
+		      .attr("height", function(d) { return height - y(d.rating_gesamt);})
+			  .attr("fill", function (d) {
+				if(d.rating_gesamt >=75) return "#00ff00";
+						else if (d.rating_gesamt >= 50) return "#B5B5B5";
+							else return "#EE0000";
+							});
+				
+			  
+                                       
+
+		});
+
+		function type(d) {
+		  d.rating_gesamt = +d.rating_gesamt;
+		  return d;
+		}
+		//http://bl.ocks.org/mbostock/3885304
+		</script>
+						  
+						  
+
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script >
+
+	<!-- zum Verstecken von Inhalten -->
+	
+	$(document).ready(function(){
+    $(".btn-primary").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+    $(".btn-success").click(function(){
+        $(".collapse").collapse('show');
+    });
+    $(".btn-warning").click(function(){
+        $(".collapse").collapse('hide');
+    });
+});
+
+	<!-- Zum Öffnen und Schließen Accordion Bewertung und Empfehlung -->
+	$('#accordion1 .collapse').on('show.bs.collapse', function () {
+  $('#accordion1 .collapse.in').collapse('hide');
+});
+
+<!-- für Popover für mehr Infos-->
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+	</script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* Für die Graphen */
+
+.grey {
+  background: #E6E6E6;
+  height: 220px;
+  
+  padding-left: 80px;
+  margin-bottom: 10px; 
+  
+}
+.greyCloud {
+  background: #ffffff;
+  height: 220px;
+  
+  
+  
+ 
+  
+}
+
+
+
+/*.legend {
+        border: 1px solid #555555;
+        border-radius: 5px 5px 5px 5px;
+        font-size: 0.8em;
+        margin: 10px;
+        padding: 8px;
+    }
+.bld {
+	font-weight: bold;
+}
+   
+*/
+/* Line ChartNEU*/
+
+/*
+path { 
+	
+	stroke-width: 2;
+	fill: none;
+}
+
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: grey;
+	stroke-width: 1;
+	shape-rendering: crispEdges;
+}
+
+
+div.tooltip {
+  position: absolute;	
+  text-align: center;	
+  width: 70px;	
+  height: 45px;		
+  padding: 2px;	
+  font: 12px sans-serif;	
+  background: lightgrey;	
+  border: 0px;					
+  border-radius: 8px;
+ 
+	
+}*/
+
+
+/* Säulendiagramm */
+
+#balken .bar:hover {
+  opacity: 0.8;
+}
+
+#balken .axis {
+  font: 10px sans-serif;
+}
+
+#balken .axis path,
+#balken .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+#balken .x.axis path {
+  display: none;
+}
+
+
+/* Donut */
+
+.arc path {
+    stroke: #fff;
+    stroke-width: 1px;
+	
+}
+.textTop {
+	font-size: 12pt;
+    fill: #bbb; 
+	
+}
+
+.textBottom {
+   fill: #444; 
+   font-weight: bold; 
+   font-size: 18pt;
+}
+
+.top {
+    border: 1px solid #bbb;
+    color: #777;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.top:hover {
+    border: 1px solid #555;
+    color: #333;
+}
+.legendDonut {
+	font-size: 18pt;
+}
+
+/*Kurven*/
+/*
+
+        .axis path, .axis line
+        {
+            fill: none;
+            stroke: #777;
+            shape-rendering: crispEdges;
+        }
+        
+        /*.axis text
+        {
+            font-family: 'Arial';
+            font-size: 13px;
+        } */
+     /*   .tick
+        {
+            stroke-dasharray: 1, 2;
+        }
+         #kurven .bar
+        {
+            fill: FireBrick;
+        }
+       */
+/* Collapsible Portalbewertung */
+
+div#id1 {
+		/*max-width: 400px; */
+		text-align: center; 
+	}
+	
+	#Aktuell{
+	position: center;
+	
+	}
+
+
+
+
+
+
+
+
+/* Weiterempfehlung */
+.Weiterempfehlung{
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-color: red;
+	
+
+
+}
+
+    .legend {
+       /* border: 1px solid #555555;*/
+        border-radius: 5px 5px 5px 5px;
+        font-size: 14px;
+        /*margin: 10px;
+        padding: 8px;*/
+    }
+    .bld {
+        font-weight: bold;
+    }
+	
+/*Kommentar-Boxen*/
+#comments-container {
+		width: 500px;
+		height: 220px;
+		overflow: scroll;
+	}
+	#comments-container .comments>div {
+		padding: 20px;
+		margin: 10px;
+		background: #f8f8f8;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+	}
+#comments-containerPositiv {
+		width: 300px;
+		height: 600px;
+		overflow: scroll;
+	}
+	#comments-containerPositiv .comments>div {
+		padding: 20px;
+		margin: 10px;
+		background: #f8f8f8;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+	}
+#comments-containerNegativ {
+		width: 300px;
+		height: 600px;
+		overflow: scroll;
+	}
+	#comments-containerNegativ .comments>div {
+		padding: 20px;
+		margin: 10px;
+		background: #f8f8f8;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+	}
+#comments-containerNeutral {
+		width: 300px;
+		height: 600px;
+		overflow: scroll;
+	}
+	#comments-containerNeutral .comments>div {
+		padding: 20px;
+		margin: 10px;
+		background: #f8f8f8;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+	}

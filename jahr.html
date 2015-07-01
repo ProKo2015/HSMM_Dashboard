@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Healthcare Praxisprojekt</title>
+		<meta name="author" content="healthcare praxisprojekt">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="js/bootstrap.min.js" rel="javascript"> 
+		<link href="normalize.css" rel="stylesheet">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="d3.min.js"></script> 
+		<script src="http://d3js.org/d3.v3.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<link href="line.css" rel="stylesheet">
+		<link href="styles.css" rel="stylesheet">
+		<script src="d3.layout.cloud.js"></script>
+		
+		 <!-- JQuery-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="jquery.mobile-1.4.5.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+		
+	
+	
+	</head>
+
+	
+
+<body>
+
+<div id="wrapper">
+<!-- Navigation -->
+
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+			<!-- optional: HealthCare -->
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav" id="sidebar" class="collapse-in"">
+						<div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-home">
+                            </span><a href="index.html" target="_self">Dashboard</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+				<div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-comment">
+                            </span><a href="pagealle.html" target="_self">Kommentare</a></a>
+                        </h4>
+                    </div>
+				</div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-cloud">
+                            </span><a href="wordcloud.html" target="_self">Wordcloud</a></a>
+                        </h4>
+                    </div>
+                </div>
+				
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-tasks">
+                            </span>Vergleiche<span class="caret"></span></a>
+                        </h4>
+                    </div>
+                    
+                        <div class="accordion-panel-body">
+                            <table class="table">
+								<tr>
+									<td>
+									    <a href="bereiche.html" target="_self">Einzelne Bereiche </a>
+									</td>
+								</tr>	
+                                <tr>
+                                    <td>
+                                        <a href="pagetragerschaft.html" target="_self">Trägerschaft Intern</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="pageregion.html" target="_self">Region</a>
+                                    </td>
+                                </tr>
+								
+								<tr>
+                                    <td id="aktuell">
+                                        <a href="jahr.html" target="_self">Jahresübersicht</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                               
+                            </table>
+                        </div>
+                    
+                </div>
+            </div>
+                </ul>
+				
+                 <ul class="nav navbar-nav navbar-user">
+						<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> St. Martinus-Krankenhaus Düsseldorf <span class="badge"></span> <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+						    <li> <a style="color:#044C92; font-weight: bold;">Wahl des Krankenhauses </a> </li>
+                            <li class="divider"></li>
+                            <li> <a href="id10.html" target="_self"> Kliniken der Stadt Köln GmbH Holweide <span class="badge"></span></a> </li>
+                            <li class="divider"></li>
+							<li> <a href="idx.html"> Klinikum Dortmund GmbH <span class="bagde"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="idx.html"> St. Josef Krankenhaus GmbH<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Alexianer Krefeld GmbH Maria-Hilf<span class="badge"></span></a></li>
+							    <li class="divider"></li>
+                            <li><a href="idx.html"> Katholisches Klinikum Essen Philippusstift<span class="badge"></span></a></li>
+							 <li class="divider"></li>
+                            <li><a style="color:#044C92;" href="startseite.html" target="_self"> Zurück zur Startseite<span class="badge"></span></a></li>
+							
+                        </ul>
+		
+						</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+						<li>
+						<img src="Logo_HSMM.png" id="logo"> </img>
+						</li>
+						
+						<li>
+						
+						<div id="suche">
+						<form class="navbar-form" role="search">
+						<div class="form-group">
+						<input type="text" class="form-control" placeholder="Suchen...">
+						</div>
+						</form> 
+						</div>
+						</li>
+						
+						</ul>
+                   
+		
+		
+        
+
+				
+                
+            </div>
+        </nav>
+ 
+
+			
+<!-- Inhalt -->
+
+      <div id="page-wrapper">
+			
+		<!-- obere Hälfte --> 
+		<div class="row">
+		
+		<div class="col-md-12">
+		
+		
+		<div class="panel panel-default">
+			  <div class="panel-heading"> <h4>Entwicklung des Stimmungsbildes im Jahresverlauf  <span class="glyphicon glyphicon-info-sign pull-right" data-toggle="popover" data-placement="bottom" data-content="Übersicht über die Anzahl der abgegebenen positiven und negativen Kommentare im Jahresverlauf (basierend auf der Sentimentanalyse)"></span> </h4> </div>
+			    <div class="grafik-panel-body">
+				<div class="container" id="line"> </div>
+				<svg id="visualisation"  width="1050" height="470"></svg>
+				</div>
+			  </div>
+			</div>
+		
+		
+		
+		</div>
+				
+                </div> <!-- Ende row -->
+
+		
+			</div> <!-- Ende Page-Wrapper -->
+
+       
+		
+		<!-- /#wrapper -->
+		</div>
+ 
+    
+
+	 <script>
+	
+	
+//Lalala Linien
+	
+
+
+// Set the dimensions of the canvas / graph
+
+
+
+// Set the dimensions of the canvas / graph
+var	margin = {top: 80, right: 20, bottom: 30, left: 150},
+	width = 850 - margin.left - margin.right,
+	height = 400 - margin.top - margin.bottom;
+
+// Parse the date / time
+var	parseDate = d3.time.format("%d-%b-%y").parse;
+var formatTime = d3.time.format("%e %B");// Format tooltip date / time
+
+// Set the ranges
+var	x = d3.time.scale().range([0, width]);
+var	y = d3.scale.linear().range([height, 0]);
+
+
+// Define the axes
+var	xAxis = d3.svg.axis().scale(x)
+	.orient("bottom").ticks(5);
+
+var	yAxis = d3.svg.axis().scale(y)
+	.orient("left").ticks(5);
+
+// Define the line
+var	valueline = d3.svg.line()
+	.x(function(d) { return x(d.monat); })
+	.y(function(d) { return y(d.anzahlPos); });
+
+var	valueline2 = d3.svg.line()
+	.x(function(d) { return x(d.monat); })
+	.y(function(d) { return y(d.anzahlNeg); });
+
+// Define 'div' for tooltips
+var div = d3.select("#visualisation")
+	.append("div")  // declare the tooltip div 
+	.attr("class", "tooltip")              // apply the 'tooltip' class
+	.style("opacity", 0);                  // set the opacity to nil
+
+// Adds the svg canvas
+var	svg = d3.select("#visualisation")
+	.append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+	.append("g")
+		.attr("transform", 
+		      "translate(" + margin.left + "," + margin.top + ")");
+
+// Get the data
+d3.json("http://134.91.18.177:5000/line_kh1", function(error, data) {
+	data.forEach(function(d) {
+		d.monat = parseDate(d.monat);
+		d.anzahlPos = +d.anzahlPos;
+		d.anzahlNeg = +d.anzahlNeg;
+	});
+
+
+	// Scale the range of the data
+	x.domain(d3.extent(data, function(d) { return d.monat; }));
+	y.domain([0, d3.max(data, function(d) { return d.anzahlNeg; })]);
+
+	// Add the valueline path.
+	svg.append("svg:path")		
+		.attr("d", valueline(data))
+		.attr("stroke", "green")
+		.attr("stroke-width", 2);
+	
+	svg.append("path")		
+		.attr("d", valueline2(data))
+		.attr("stroke", "red")
+		.attr("stroke-width", 2);
+
+	// draw the scatterplot
+	svg.selectAll("dot")									
+		.data(data)											
+	.enter().append("circle")								
+		.attr("r", 5)	
+		.attr("cx", function(d) { return x(d.monat); })		 
+		.attr("cy", function(d) { return y(d.anzahlPos); })
+	// Tooltip stuff after this
+	    .on("mouseover", function(d) {		
+            div.transition()
+				.duration(500)	
+				.style("opacity", 0);
+			div.transition()
+				.duration(200)	
+				.style("opacity", .9);	
+			div.html(                      
+				"positive Kommentare: "  + d.anzahlPos)	 
+				.style("left", (d3.event.pageX) + "px")			 
+				.style("top", (d3.event.pageY - 50) + "px");
+			})
+			.on("mouseout", function(d) {
+				d3.select(this).select("path").transition()
+					.duration(200)
+					.attr("d", arc);
+			
+				});
+
+	
+	svg.selectAll("dot")									
+		.data(data)											
+	.enter().append("circle")								
+		.attr("r", 5)	
+		.attr("cx", function(d) { return x(d.monat); })		 
+		.attr("cy", function(d) { return y(d.anzahlNeg); })
+	// Tooltip stuff after this
+	    .on("mouseover", function(d) {		
+            div.transition()
+				.duration(500)	
+				.style("opacity", 0);
+			div.transition()
+				.duration(200)	
+				.style("opacity", .9);	
+			div	.html(
+				"negative Kommentare: "  + d.anzahlNeg)	 
+				.style("left", (d3.event.pageX) + "px")			 
+				.style("top", (d3.event.pageY - 20) + "px");
+			});
+
+	svg.append("text")      
+        .attr("x", 15)
+        .attr("y", -30 )
+        .style("text-anchor", "middle")
+        .text("Anzahl der \n Bewertungen");
+	// Add the X Axis
+	svg.append("g")	
+		.attr("class", "x axis")
+		.attr("transform", "translate(0," + height + ")")
+		.call(xAxis);
+
+	// Add the Y Axis
+	svg.append("g")	
+		.attr("class", "y axis")
+		.call(yAxis);
+
+});
+
+
+	</script>
+						  
+						  
+
+
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<script >
+
+	<!-- zum Verstecken von Inhalten -->
+	
+	$(document).ready(function(){
+    $(".btn-primary").click(function(){
+        $(".collapse").collapse('toggle');
+    });
+    $(".btn-success").click(function(){
+        $(".collapse").collapse('show');
+    });
+    $(".btn-warning").click(function(){
+        $(".collapse").collapse('hide');
+    });
+});
+
+	<!-- Zum Öffnen und Schließen Accordion Bewertung und Empfehlung -->
+	$('#accordion1 .collapse').on('show.bs.collapse', function () {
+  $('#accordion1 .collapse.in').collapse('hide');
+});
+
+<!-- für Popover für mehr Infos-->
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('body').on('click', function (e) {
+    $('[data-toggle="popover"]').each(function () {
+        //the 'is' for buttons that trigger popups
+        //the 'has' for icons within a button that triggers a popup
+        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+            $(this).popover('hide');
+        }
+    });
+});
+	</script>
+</body>
+</html>
