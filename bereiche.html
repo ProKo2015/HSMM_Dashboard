@@ -233,7 +233,7 @@
 		    .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 			//.attr("fill", function(d, i) { return color(i); } );
 
-				d3.json("http://134.91.18.177:5000/balkendia_kh1", function(error, data) {
+				d3.json("balkendia_kh1.json", function(error, data) {
 		  x.domain(data.map(function(d) { return d.name; }));
 		  y.domain([0, d3.max(data, function(d) { return d.wertung; })]); //einbindung des DatenArrays
 		  

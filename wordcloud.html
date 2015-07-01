@@ -190,7 +190,7 @@
  <script>
 
 //Wordcloud
-d3.json("http://134.91.18.177:5000/worthaeufigkeit_kh1", function(error, data) {	
+d3.json("worthaeufigkeit_kh1.json", function(error, data) {	
 		
 	var width = $("#dash2").width();
 	
@@ -232,7 +232,7 @@ d3.json("http://134.91.18.177:5000/worthaeufigkeit_kh1", function(error, data) {
 });
 	
 	
-d3.json("http://134.91.18.177:5000/collapsible_kh1", function(error, data) {
+d3.json("collapsible_kh1.json", function(error, data) {
 						
 						var comments1 = d3.select("#wertKliniken.de").append("div")
 							.attr("class", "comments")

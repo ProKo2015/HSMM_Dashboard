@@ -252,7 +252,7 @@ var	svg = d3.select("#visualisation")
 		      "translate(" + margin.left + "," + margin.top + ")");
 
 // Get the data
-d3.json("http://134.91.18.177:5000/line_kh1", function(error, data) {
+d3.json("line_kh1.json", function(error, data) {
 	data.forEach(function(d) {
 		d.monat = parseDate(d.monat);
 		d.anzahlPos = +d.anzahlPos;

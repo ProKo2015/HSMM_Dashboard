@@ -183,7 +183,7 @@
 					var w = 800,
 					h = 400;
 					
-					d3.json("http://134.91.18.177:5000/einteilungpos_kh1", function(error, data) {
+					d3.json("einteilungpos_kh1.json", function(error, data) {
 						
 						var comments = d3.select("#comments-containerPositiv").append("div")
 							.attr("class", "comments")
@@ -218,7 +218,7 @@
 					var w = 800,
 					h = 400;
 					
-					d3.json("http://134.91.18.177:5000/einteilungneg_kh1", function(error, data) {
+					d3.json("einteilungneg_kh1.json", function(error, data) {
 						
 						var comments = d3.select("#comments-containerNegativ").append("div")
 							.attr("class", "comments")
@@ -249,7 +249,7 @@
 					var w = 800,
 					h = 400;
 					
-					d3.json("http://134.91.18.177:5000/einteilungneu_kh1", function(error, data) {
+					d3.json("einteilungneu_kh1.json", function(error, data) {
 						
 						var comments = d3.select("#comments-containerNeutral").append("div")
 							.attr("class", "comments")
